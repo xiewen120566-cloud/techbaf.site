@@ -15,7 +15,7 @@ export default async function Info({ locale }: { locale: Locale }) {
   const baseUrlInput = (process.env.BASE_URL ?? "")
     .trim()
     .replace(/^['"]+|['"]+$/g, "");
-  const baseUrl = baseUrlInput || "https://slopegames.net";
+  const baseUrl = baseUrlInput || "https://techbaf.site";
   const normalizedBaseUrl =
     baseUrl.startsWith("http://") || baseUrl.startsWith("https://")
       ? baseUrl
@@ -34,8 +34,8 @@ export default async function Info({ locale }: { locale: Locale }) {
         shadow="none"
       >
         <CardBody pt={0}>
-          <VStack fontSize="xs" gap={1} alignItems="stretch">
-            <Heading size="sm" pb={1}>
+          <VStack fontSize="xs" gap={1} alignItems="stretch" color="blue.500">
+            <Heading size="sm" pb={1} color="blue.500">
               {t.rich("section1.title", {
                 hostname: normalizedBaseUrl,
                 tagname: (text) => (
@@ -64,8 +64,8 @@ export default async function Info({ locale }: { locale: Locale }) {
         shadow="none"
       >
         <CardBody pt={0}>
-          <VStack fontSize="xs" gap={1} alignItems="stretch">
-            <Heading size="sm" pb={1}>
+          <VStack fontSize="xs" gap={1} alignItems="stretch" color="blue.500">
+            <Heading size="sm" pb={1} color="blue.500">
               {t.rich("section2.title", {
                 hostname: normalizedBaseUrl,
                 tagname: (text) => (
@@ -115,8 +115,8 @@ export default async function Info({ locale }: { locale: Locale }) {
         shadow="none"
       >
         <CardBody pt={0}>
-          <VStack fontSize="xs" gap={1} alignItems="stretch">
-            <Heading size="sm" pb={1}>
+          <VStack fontSize="xs" gap={1} alignItems="stretch" color="blue.500">
+            <Heading size="sm" pb={1} color="blue.500">
               {t.rich("section3.title", {
                 hostname: normalizedBaseUrl,
                 tagname: (text) => (
