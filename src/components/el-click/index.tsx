@@ -23,6 +23,7 @@ const ElClick: React.FC = () => {
       if (!activeElement || activeElement.tagName !== "IFRAME") return null;
 
       const adContainer =
+        activeElement.closest("[id^='div-gpt-ad-']") ||
         activeElement.closest(".gpt-slot") ||
         activeElement.closest(".adsbygoogle") ||
         activeElement.closest(".ad-placeholder");
@@ -63,7 +64,7 @@ const ElClick: React.FC = () => {
       //     ...adData,
       //   },
       // }));
-      window.ttq.track("ClickButton");
+      (window as any).ttq?.track?.("ClickButton");
     }
   }, [collectAdData]);
 
@@ -86,7 +87,7 @@ const ElClick: React.FC = () => {
         //     ...adData,
         //   },
         // }));
-        window.ttq.track("ClickButton");
+        (window as any).ttq?.track?.("ClickButton");
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪
         isBeforeUnloadHandled.current = true;
