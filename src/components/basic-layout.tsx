@@ -33,8 +33,13 @@ window.googletag = window.googletag || {cmd: []};
 googletag.cmd.push(function() {
   googletag.defineSlot(
     '/23344817886/4999',
-    [[320, 50], [300, 50], [300, 100], [300, 250], [300, 31], [300, 75]],
-    'div-gpt-ad-1775488517407-0'
+    [[300, 250], [300, 50], [300, 100], [300, 31], [300, 75], [320, 50]],
+    'div-gpt-ad-1775825598345-0'
+  ).addService(googletag.pubads());
+  googletag.defineSlot(
+    '/23344817886/4999',
+    [[300, 250], [300, 50], [300, 100], [300, 31], [300, 75], [320, 50]],
+    'div-gpt-ad-1775825598345-1'
   ).addService(googletag.pubads());
   googletag.pubads().enableSingleRequest();
   googletag.enableServices();
@@ -50,7 +55,7 @@ googletag.cmd.push(function() {
             <div className="gpt-sticky-bottom">
               <div className="gpt-sticky-bottom__inner">
                 <div
-                  id="div-gpt-ad-1775488517407-0"
+                  id="div-gpt-ad-1775825598345-0"
                   style={{ minWidth: "300px", minHeight: "31px" }}
                 />
                 <Script
@@ -58,7 +63,7 @@ googletag.cmd.push(function() {
                   strategy="afterInteractive"
                   dangerouslySetInnerHTML={{
                     __html: `
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1775488517407-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1775825598345-0'); });
                     `,
                   }}
                 />

@@ -52,7 +52,7 @@ export default async function Page({
       <Header hostname={hostname} categories={categories} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
         <ElTemplate
-          id="div-gpt-ad-1775487047646-0"
+          id="div-gpt-ad-1775825598345-1"
           style={{ minWidth: 300, minHeight: 250 }}
         />
         <VStack alignItems="stretch" gap={{ base: 6, md: 8 }}>
