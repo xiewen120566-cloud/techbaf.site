@@ -64,7 +64,7 @@ const ElClick: React.FC = () => {
       //     ...adData,
       //   },
       // }));
-      (window as any).ttq?.track?.("ClickButton");
+      window.ttq?.track?.("ClickButton");
     }
   }, [collectAdData]);
 
@@ -87,7 +87,7 @@ const ElClick: React.FC = () => {
         //     ...adData,
         //   },
         // }));
-        (window as any).ttq?.track?.("ClickButton");
+        window.ttq?.track?.("ClickButton");
         console.log(JSON.stringify(adData));
         // 使用更简洁的方式触发像素跟踪
         isBeforeUnloadHandled.current = true;
@@ -103,8 +103,11 @@ const ElClick: React.FC = () => {
       setTimeout(() => {
         isBlurTriggered.current = false;
       }, 300);
+      setTimeout(() => {
+        debouncedTrackAdClick();
+      }, 0);
     }
-  }, []);
+  }, [debouncedTrackAdClick]);
 
   const handleVisibilityChange = useCallback(
     () => {
@@ -130,7 +133,7 @@ const ElClick: React.FC = () => {
         target.closest(".ad-placeholder") ||
         target.closest(".adsbygoogle");
       if (!adContainer) return;
-      (window as any).ttq?.track?.("ClickButton");
+      window.ttq?.track?.("ClickButton");
     };
     window.addEventListener("pointerdown", handler, true);
     return () => window.removeEventListener("pointerdown", handler, true);
