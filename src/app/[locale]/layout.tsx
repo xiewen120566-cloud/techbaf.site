@@ -56,7 +56,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
 
-  ttq.load('D79MF9BC77U8MDEGDVB0');
+  ttq.load('D7D6QPJC77U2JIH507DG');
   ttq.page();
 }(window, document, 'ttq');
           `,
