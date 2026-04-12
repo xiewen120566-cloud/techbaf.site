@@ -19,6 +19,12 @@ export default async function BaseLayout({ children, locale }: Props) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <Script
+          id="maxvalue-ads"
+          src="https://ads.maxvaluead.com/scripts/maxvalue_ads_2262481956.js"
+          strategy="afterInteractive"
+          data-cfasync="false"
+        />
+        <Script
           async
           src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
           crossOrigin="anonymous"
