@@ -23,6 +23,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   return (
     <BaseLayout locale={locale}>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6014588526912937"
+        crossOrigin="anonymous"
+        strategy="beforeInteractive"
+      />
       {/* <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-0FKCXR93S2"

@@ -64,8 +64,12 @@ export default async function Page({
       <Header categories={categories} hostname={hostname} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
         <ElTemplate
-          id="div-gpt-ad-1775825598345-1"
-          style={{ minWidth: 300, minHeight: 250 }}
+          id="goplaygame-Category-MultiAd"
+          className="adsbygoogle"
+          data-ad-client="ca-pub-6014588526912937"
+          data-ad-slot="9055658744"
+          data-ad-format="autorelaxed"
+          style={{ display: "block" }}
         />
         <VStack alignItems="stretch" gap={{ base: 6, md: 8 }}>
           <Box
@@ -110,6 +114,15 @@ export default async function Page({
           </Box>
           <Info locale={locale} />
         </VStack>
+        <ElTemplate
+          id="goplaygame-Category-Banner"
+          className="adsbygoogle"
+          data-ad-client="ca-pub-6014588526912937"
+          data-ad-slot="7487426206"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+          style={{ display: "block" }}
+        />
       </Container>
       <Footer />
     </>
