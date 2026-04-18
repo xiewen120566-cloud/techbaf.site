@@ -39,7 +39,7 @@ export default async function Page({
   const baseUrlInput = (process.env.BASE_URL ?? "")
     .trim()
     .replace(/^['"]+|['"]+$/g, "");
-  const baseUrl = baseUrlInput || "https://techbaf.site";
+  const baseUrl = baseUrlInput || "https://www.techbaf.site";
   const normalizedBaseUrl =
     baseUrl.startsWith("http://") || baseUrl.startsWith("https://")
       ? baseUrl
