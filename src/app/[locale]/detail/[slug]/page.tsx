@@ -26,7 +26,7 @@ import {
 } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import { getTargetHref, randomGames} from "@/utils";
-const ElTemplate = dynamic(() => import("@/components/el-temlplate"), { ssr: false })
+const GptAd = dynamic(() => import("@/components/gpt-ad"), { ssr: false });
 interface Props {
   params: {
     locale: Locale;
@@ -47,7 +47,7 @@ export default async function Page({
   const baseUrlInput = (process.env.BASE_URL ?? "")
     .trim()
     .replace(/^['"]+|['"]+$/g, "");
-  const baseUrl = baseUrlInput || "https://www.wwwtechbaf.site";
+  const baseUrl = baseUrlInput || "https://www.techbaf.site";
   const normalizedBaseUrl =
     baseUrl.startsWith("http://") || baseUrl.startsWith("https://")
       ? baseUrl
@@ -75,13 +75,12 @@ export default async function Page({
     <>
       <Header hostname={hostname} categories={categories} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} pt={{ base: 4, md: 6 }}>
-        <ElTemplate
-          id="goplaygame-Detail-MultiAd"
-          className="adsbygoogle"
-          data-ad-client="ca-pub-6014588526912937"
-          data-ad-slot="9055658744"
-          data-ad-format="autorelaxed"
-          style={{ display: "block" }}
+        <GptAd
+          adId="div-gpt-ad-1778510561312-4"
+          adUnitPath="/23344817886/123"
+          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
+          minWidth={300}
+          minHeight={50}
         />
       </Container>
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
@@ -169,14 +168,12 @@ export default async function Page({
           </SimpleGrid>
         </Box>
         <Info locale={locale} />
-        <ElTemplate
-          id="goplaygame-Detail-Banner"
-          className="adsbygoogle"
-          data-ad-client="ca-pub-6014588526912937"
-          data-ad-slot="7487426206"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-          style={{ display: "block" }}
+        <GptAd
+          adId="div-gpt-ad-1778510561312-5"
+          adUnitPath="/23344817886/123"
+          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
+          minWidth={300}
+          minHeight={50}
         />
       </Container>
       <Footer />
