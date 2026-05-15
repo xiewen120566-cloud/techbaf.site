@@ -64,9 +64,9 @@ export default async function Page({
       <Header categories={categories} hostname={hostname} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} py={{ base: 4, md: 6 }}>
         <GptAd
-          adId="div-gpt-ad-1778510561312-2"
+          divId="div-gpt-ad-1778850073456-0"
           adUnitPath="/23344817886/123"
-          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
+          sizes={[[300, 250], [320, 50], [300, 100], [300, 50], [300, 75]]}
           minWidth={300}
           minHeight={50}
         />
@@ -113,13 +113,6 @@ export default async function Page({
           </Box>
           <Info locale={locale} />
         </VStack>
-        <GptAd
-          adId="div-gpt-ad-1778510561312-3"
-          adUnitPath="/23344817886/123"
-          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
-          minWidth={300}
-          minHeight={50}
-        />
       </Container>
       <Footer />
     </>

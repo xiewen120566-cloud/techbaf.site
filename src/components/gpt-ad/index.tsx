@@ -30,7 +30,7 @@ declare global {
 }
 
 interface GptAdProps {
-  adId: string;
+  divId: string;
   adUnitPath: string;
   sizes: Array<[number, number]>;
   minWidth?: number;
@@ -38,7 +38,7 @@ interface GptAdProps {
 }
 
 export default function GptAd({
-  adId,
+  divId,
   adUnitPath,
   sizes,
   minWidth = 300,
@@ -54,10 +54,10 @@ export default function GptAd({
       }
 
       const slots = gt.pubads().getSlots();
-      const exists = slots.some((slot) => slot.getSlotElementId() === adId);
+      const exists = slots.some((slot) => slot.getSlotElementId() === divId);
 
       if (!exists) {
-        gt.defineSlot(adUnitPath, sizes, adId)?.addService(gt.pubads());
+        gt.defineSlot(adUnitPath, sizes, divId)?.addService(gt.pubads());
       }
 
       if (!window.__gptServicesEnabled) {
@@ -66,9 +66,9 @@ export default function GptAd({
         window.__gptServicesEnabled = true;
       }
 
-      gt.display(adId);
+      gt.display(divId);
     });
-  }, [adId, adUnitPath, sizes]);
+  }, [divId, adUnitPath, sizes]);
 
-  return <Box id={adId} minW={`${minWidth}px`} minH={`${minHeight}px`} />;
+  return <Box id={divId} minW={`${minWidth}px`} minH={`${minHeight}px`} />;
 }

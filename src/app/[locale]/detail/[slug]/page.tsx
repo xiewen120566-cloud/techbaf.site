@@ -76,9 +76,9 @@ export default async function Page({
       <Header hostname={hostname} categories={categories} />
       <Container maxWidth="container.xl" px={{ base: 3, md: 4, lg: 6 }} pt={{ base: 4, md: 6 }}>
         <GptAd
-          adId="div-gpt-ad-1778510561312-4"
+          divId="div-gpt-ad-1778850073456-0"
           adUnitPath="/23344817886/123"
-          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
+          sizes={[[300, 250], [320, 50], [300, 100], [300, 50], [300, 75]]}
           minWidth={300}
           minHeight={50}
         />
@@ -168,13 +168,6 @@ export default async function Page({
           </SimpleGrid>
         </Box>
         <Info locale={locale} />
-        <GptAd
-          adId="div-gpt-ad-1778510561312-5"
-          adUnitPath="/23344817886/123"
-          sizes={[[300, 250], [300, 75], [300, 50], [320, 50], [300, 100]]}
-          minWidth={300}
-          minHeight={50}
-        />
       </Container>
       <Footer />
     </>
